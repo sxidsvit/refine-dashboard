@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+ app-dev:
+  image: refine-dashboard-dev-image
+  container_name: refine-dashboard-dev
+  build:
+    context: .
+    dockerfile: Dockerfile
+  ports:
+    - "5173:5173"
+  volumes:
+    - .:/app
+    - /app/node_modules
